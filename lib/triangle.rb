@@ -20,7 +20,7 @@ end
 end
 
 def validate_triangle 
-  legal_triangle 
+  legal_triangle = [()]
 
 class TriangleError < StandardError 
 end
