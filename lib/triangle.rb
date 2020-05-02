@@ -21,10 +21,13 @@ end
 
 def validate_triangle 
   legal_triangle = [(a+b>c),(a+c>b), (b+c>a)] 
-  [a,b,c].each{|side| legal_triangle << false if side <=0} 
+  [a,b,c].each do |side|
+    legal_triangle << false if 
+    side <=0 
   raise TriangleError if legal_triangle.include?(false)
 end
 end
 
 class TriangleError < StandardError 
+end
 end
